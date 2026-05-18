@@ -1,5 +1,3 @@
-<img width="2240" height="1400" alt="image" src="https://github.com/user-attachments/assets/317af8ae-b959-4aba-83cb-756a069f4a47" /># Changelog
-
 All additions and rejections are logged here. Most recent entries appear first.
 
 ---
