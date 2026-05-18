@@ -112,6 +112,7 @@ The attacker corrupts the agent's external memory or knowledge base, causing ret
 | [PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation](https://arxiv.org/abs/2402.07867) | USENIX Security 2025 | Shows 5 poisoned documents among millions can achieve 90% attack success; alarming scalability |
 | [AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases](https://arxiv.org/abs/2407.12784) | NeurIPS 2024 | Extends RAG poisoning to full agent pipelines; shows memory poisoning transfers across agent tasks |
 | [Backdoored Retrievers for Prompt Injection Attacks on RAG](https://arxiv.org/abs/2410.14479) | arXiv 2024 | Targets the retriever component itself rather than the corpus; harder to detect than corpus poisoning |
+| [Hidden in the Metadata: Stealth Poisoning Attacks on Multimodal Retrieval-Augmented Generation](https://arxiv.org/abs/2603.00172) | arXiv 2026 | Image-intact metadata-only poisoning achieves 91% ASR on multimodal RAG; bypasses query paraphrasing and consistency checks but requires write-access to metadata |
 
 ---
 
