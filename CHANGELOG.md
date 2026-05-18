@@ -1,3 +1,5 @@
+# Changelog
+
 All additions and rejections are logged here. Most recent entries appear first.
 
 ---
