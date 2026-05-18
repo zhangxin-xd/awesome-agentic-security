@@ -1,4 +1,4 @@
-# Changelog
+<img width="2240" height="1400" alt="image" src="https://github.com/user-attachments/assets/317af8ae-b959-4aba-83cb-756a069f4a47" /># Changelog
 
 All additions and rejections are logged here. Most recent entries appear first.
 
@@ -38,5 +38,13 @@ All additions and rejections are logged here. Most recent entries appear first.
 - [Agent Security Bench (ASB)](https://arxiv.org/abs/2410.02644) → §0 Surveys | Most comprehensive formalization; 10 attack scenarios, 10 agents, 398 environments
   - 来源：初始建库
   - 收录理由：目前最全面的 agent 安全 benchmark，ICLR 2025
+
+## 2026-05-17
+
+### Added
+- [Hidden in the Metadata (MM-MEPA)](https://arxiv.org/abs/2603.00172) → §1.3 Memory & RAG Poisoning | Image-intact metadata-only poisoning achieves 91% ASR on multimodal RAG; bypasses query paraphrasing and consistency checks
+  - 来源:arXiv cs.CR daily
+  - 收录理由:多模态 RAG 投毒论文；攻击方式（仅篡改元数据、不注入新内容）
+
 
 ---
