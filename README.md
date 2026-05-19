@@ -100,6 +100,8 @@ Malicious instructions are embedded in content the agent retrieves from the envi
 | [AgentDojo: A Dynamic Environment to Evaluate Attacks and Defenses for LLM Agents](https://arxiv.org/abs/2406.13352) | NeurIPS 2024 | Best current benchmark for indirect injection; realistic task environments but limited to web/email scenarios |
 | [WASP: Benchmarking Web Agent Security Against Prompt Injection Attacks](https://arxiv.org/abs/2504.18575) | arXiv 2025 | Specifically targets web navigation agents; more realistic threat model than AgentDojo |
 | [(Ab)using Images and Sounds for Indirect Instruction Injection in Multi-modal LLMs](https://arxiv.org/abs/2307.10490) | arXiv 2023 | Extends indirect injection to non-text modalities; underexplored area |
+| [Dissecting Adversarial Robustness of Multimodal LM Agents](https://arxiv.org/abs/2406.12814) | ICLR 2025 | Imperceptible pixel perturbations ; ARE framework decomposes robustness |
+| [AdvAgent: Controllable Blackbox Red-teaming on Web Agents](https://arxiv.org/abs/2410.17401) | ICML 2025 | RL-trained adversarial prompter ; injects strings into invisible HTML fields|
 
 ---
 
@@ -112,7 +114,7 @@ The attacker corrupts the agent's external memory or knowledge base, causing ret
 | [PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation](https://arxiv.org/abs/2402.07867) | USENIX Security 2025 | Shows 5 poisoned documents among millions can achieve 90% attack success; alarming scalability |
 | [AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases](https://arxiv.org/abs/2407.12784) | NeurIPS 2024 | Extends RAG poisoning to full agent pipelines; shows memory poisoning transfers across agent tasks |
 | [Backdoored Retrievers for Prompt Injection Attacks on RAG](https://arxiv.org/abs/2410.14479) | arXiv 2024 | Targets the retriever component itself rather than the corpus; harder to detect than corpus poisoning |
-| [Hidden in the Metadata: Stealth Poisoning Attacks on Multimodal Retrieval-Augmented Generation](https://arxiv.org/abs/2603.00172) | arXiv 2026 | Image-intact metadata-only poisoning achieves 91% ASR on multimodal RAG; bypasses query paraphrasing and consistency checks but requires write-access to metadata |
+| [Hidden in the Metadata: Stealth Poisoning Attacks on Multimodal Retrieval-Augmented Generation](https://arxiv.org/abs/2603.00172) | arXiv 2026 | Image-intact metadata-only poisoning ; bypasses query paraphrasing and consistency checks |
 
 ---
 
@@ -204,8 +206,9 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 | [ASB (Agent Security Bench)](https://arxiv.org/abs/2410.02644) | ICLR 2025 | 10 attack types across 10 agents | Synthetic environments only |
 | [AgentDoG](https://github.com/AI45Lab/AgentDoG) | arXiv 2025 | Trajectory-level safety evaluation with 3D taxonomy | New; limited third-party validation |
 | [WASP](https://arxiv.org/abs/2504.18575) | arXiv 2025 | Web agent prompt injection | Web-only scope |
+| [CVE-Bench](https://arxiv.org/abs/2503.17332) | ICML 2025 Spotlight | Agent offensive capability | Web app vulnerabilities only; measures attack capability |
 
----
+---only
 
 ## 4. Tools & Frameworks
 
@@ -216,6 +219,7 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 | [AgentDoG](https://github.com/AI45Lab/AgentDoG) | Diagnostic guardrail framework with taxonomy-guided evaluation |
 | [Garak](https://github.com/NVIDIA/garak) | LLM vulnerability scanner; some agent-specific probes |
 | [PromptBench](https://github.com/microsoft/promptbench) | Robustness evaluation; useful baseline for injection testing |
+| [AgentFuzz](https://www.usenix.org/conference/usenixsecurity25/presentation/liu-fengyu) | fuzzing framework for taint-style vulnerability detection; discovered  vulnerabilities (USENIX Security 2025) |
 
 ---
 
