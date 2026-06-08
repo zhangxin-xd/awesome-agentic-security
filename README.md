@@ -89,6 +89,7 @@ The attacker controls the user-facing input to the agent directly.
 | [Prompt Injection Attacks and Defenses in LLM-Integrated Applications](https://arxiv.org/abs/2310.12815) | arXiv 2023 | Foundational taxonomy of direct injection; predates agentic tool-use context |
 | [AgentHarm: A Benchmark for Direct Misuse of LLM Agents](https://arxiv.org/abs/2410.09024) | ICLR 2025 | Focuses on direct harmful requests (not adversarial injection); fills a gap vs. indirect-focused benchmarks |
 | [Jailbreaking Leading Safety-Aligned LLMs with Simple Adaptive Attacks](https://arxiv.org/abs/2404.02151) | ICLR 2025 | Shows adaptive attacks break most existing defenses; highlights the fragility of guardrail-only approaches |
+| [Imprompter: Tricking LLM Agents into Improper Tool Use](https://arxiv.org/abs/2410.14923) | arXiv 2024 (UCSD, Fernandes group) | Automatically generates obfuscated adversarial prompts that hijack production agents (Mistral LeChat, ChatGLM) to exfiltrate PII; ~80% end-to-end ASR; led to real CVE-style mitigation by Mistral |
 
 ---
 
@@ -173,6 +174,7 @@ In multi-agent systems, a compromised agent can spread malicious instructions to
 | [Spotlighting: Defending Against Indirect Prompt Injection Attacks](https://arxiv.org/abs/2403.14720) | CAMLIS 2024 (Microsoft) | Datamarking/encoding/delimiting techniques to signal data provenance |
 | [The Task Shield: Enforcing Task Alignment to Defend Against Indirect Prompt Injection in LLM Agents](https://arxiv.org/abs/2412.16682) | ACL 2025 | Task-alignment verification |
 | [Prompt Guard 2](https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-86M) | Meta 2025 | Lightweight classifier for injection detection; fast but struggles with indirect/obfuscated injections |
+| [MELON: Provable Defense Against Indirect Prompt Injection Attacks in AI Agents](https://arxiv.org/abs/2502.05174) | ICML 2025 | Dual-execution detection — re-runs the agent with a masked user prompt and flags an attack if tool calls match; outperforms SOTA on AgentDojo; adds inference cost |
 
 ---
 
@@ -221,6 +223,7 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 | [AgentDoG](https://github.com/AI45Lab/AgentDoG) | arXiv 2025 | Trajectory-level safety evaluation with 3D taxonomy | New; limited third-party validation |
 | [WASP](https://arxiv.org/abs/2504.18575) | arXiv 2025 | Web agent prompt injection | Web-only scope |
 | [CVE-Bench](https://arxiv.org/abs/2503.17332) | ICML 2025 Spotlight | Agent offensive capability | Web app vulnerabilities only; measures attack capability |
+| [WASP](https://arxiv.org/abs/2504.18575) | NeurIPS 2025 D&B (Meta FAIR) | Realistic end-to-end web-agent prompt injection benchmark | Attacker constrained to plausible site-user capabilities; only web tasks |
 
 ---only
 
