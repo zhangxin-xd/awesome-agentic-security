@@ -237,6 +237,7 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 | [Garak](https://github.com/NVIDIA/garak) | LLM vulnerability scanner; some agent-specific probes |
 | [PromptBench](https://github.com/microsoft/promptbench) | Robustness evaluation; useful baseline for injection testing |
 | [AgentFuzz](https://www.usenix.org/conference/usenixsecurity25/presentation/liu-fengyu) | fuzzing framework for taint-style vulnerability detection; discovered  vulnerabilities (USENIX Security 2025) |
+| [TWZRD Agent Intel](https://intel.twzrd.xyz) | On-chain trust scoring for AI agent wallets on Solana. `score_agent(wallet)` returns a behavioral reputation score; `preflight_check(wallet)` gives a go/no-go before agent-to-agent transactions. Free streamable-HTTP MCP server. |
 
 ---
 
