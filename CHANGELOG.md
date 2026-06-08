@@ -3,6 +3,30 @@
 All additions and rejections are logged here. Most recent entries appear first.
 
 ---
+## 2026-06-08
+
+### Added (3 papers, batch update)
+
+#### §1.1 Direct Prompt Injection
+- [Imprompter](https://arxiv.org/abs/2410.14923) → §1.1 | Auto-generated obfuscated prompts that hijack production agents to exfiltrate PII; ~80% end-to-end ASR
+  - Source: arXiv 2024 (UCSD, Earlence Fernandes group) / imprompter.ai
+  - Reason: High-impact attack with confirmed real-world mitigation by Mistral; widely cited by SecAlign, WASP, VIGIL; covered by Wired and 404 Media [high-impact, industry-mitigated]
+
+#### §2.1 Input Filtering & Guardrails
+- [MELON](https://arxiv.org/abs/2502.05174) → §2.1 | Masked re-Execution and TooL comparisON; outperforms SOTA on AgentDojo
+  - Source: ICML 2025 (UCSB)
+  - Reason: Top venue ICML; new detection paradigm orthogonal to Spotlighting/Task Shield (execution-level, not input-level)
+
+#### §3 Benchmarks & Evaluation
+- [WASP](https://arxiv.org/abs/2504.18575) → §3 | End-to-end web-agent security benchmark with realistic adversary model
+  - Source: NeurIPS 2025 Datasets & Benchmarks Track (Meta FAIR)
+  - Reason: Top venue NeurIPS D&B; addresses AgentDojo's limitation on web-specific multi-step adversarial scenarios; standard adversary-constrained setup
+
+### Considered but Rejected
+
+- [Breaking Agents (Zhang et al., arXiv 2024)](https://arxiv.org/abs/2407.20859) | Reason: Solid work on malfunction amplification, but overlaps with Watch Out for Your Agents (already in §1.5) on backdoor-style triggers
+- [ToolTweak (arXiv 2510.02554)](https://arxiv.org/abs/2510.02554) | Reason: Tool selection attack, but not yet at venue; defer until citation count or top-venue acceptance
+
 ## 2026-05-25
 
 ### Added (15 papers, batch update — agent safety classics)
