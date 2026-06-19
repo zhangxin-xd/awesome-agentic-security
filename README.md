@@ -145,6 +145,8 @@ The attacker poisons training data or few-shot demonstrations so that a trigger 
 | [Watch Out for Your Agents! Investigating Backdoor Threats to LLM-Based Agents](https://arxiv.org/abs/2402.11208) | NeurIPS 2024 | Systematic study of backdoor threats specific to agents; demonstrates attack via poisoned tool demonstrations |
 | [BadAgent: Inserting and Activating Backdoor Attacks in LLM Agents](https://arxiv.org/abs/2406.03007) | arXiv 2024 | Shows backdoors survive fine-tuning; practical threat for fine-tuned agent deployments |
 | [Rules File Backdoor](https://pillar.security/blog/the-rules-file-backdoor-ai-code-editors-under-attack) | Pillar Security 2025 | Real-world backdoor via poisoned IDE configuration files; demonstrates supply-chain attack surface |
+| [BadChain: Backdoor Chain-of-Thought Prompting for Large Language Models](https://arxiv.org/abs/2401.12242) | ICLR 2024 (UIUC, Bo Li group) | First backdoor against CoT prompting via poisoned demonstrations; 97% ASR on GPT-4 across 6 reasoning tasks; shuffling-based defenses fail |
+| [DemonAgent: Dynamically Encrypted Multi-Backdoor Implantation Attack on LLM-based Agent](https://arxiv.org/abs/2502.12575) | EMNLP Findings 2025 | Decomposes backdoor into encrypted sub-fragments triggered cumulatively across the workflow; ~100% ASR with 0% detection rate; releases AgentBackdoorEval dataset |
 
 ---
 
@@ -173,8 +175,9 @@ In multi-agent systems, a compromised agent can spread malicious instructions to
 | [ShieldAgent: Shielding Agents via Verifiable Safety Policy Reasoning](https://arxiv.org/abs/2502.17747) | ICML 2025 | Generates guardrail policies from documents; more flexible than rule-based systems |
 | [Spotlighting: Defending Against Indirect Prompt Injection Attacks](https://arxiv.org/abs/2403.14720) | CAMLIS 2024 (Microsoft) | Datamarking/encoding/delimiting techniques to signal data provenance |
 | [The Task Shield: Enforcing Task Alignment to Defend Against Indirect Prompt Injection in LLM Agents](https://arxiv.org/abs/2412.16682) | ACL 2025 | Task-alignment verification |
-| [Prompt Guard 2](https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-86M) | Meta 2025 | Lightweight classifier for injection detection; fast but struggles with indirect/obfuscated injections |
 | [MELON: Provable Defense Against Indirect Prompt Injection Attacks in AI Agents](https://arxiv.org/abs/2502.05174) | ICML 2025 | Dual-execution detection — re-runs the agent with a masked user prompt and flags an attack if tool calls match; outperforms SOTA on AgentDojo; adds inference cost |
+| [Prompt Guard 2](https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-86M) | Meta 2025 | Lightweight classifier for injection detection; fast but struggles with indirect/obfuscated injections |
+
 
 ---
 
@@ -187,6 +190,7 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 | [The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions](https://arxiv.org/abs/2404.13208) | arXiv 2024 (OpenAI) | Defines a 4-level privilege hierarchy (system > developer > user > tool) and teaches it via SFT data augmentation |
 | [StruQ: Defending Against Prompt Injection with Structured Queries](https://arxiv.org/abs/2402.06363) | USENIX Security 2025 | Structured prompt/data channels via reserved tokens + adversarial SFT |
 | [Rule-Based Rewards for Language Model Safety](https://cdn.openai.com/rule-based-rewards-for-language-model-safety.pdf) | OpenAI 2024 | RLHF-based approach to privilege-aware instruction following; hard to generalize beyond OpenAI's setup |
+| [SecAlign: Defending Against Prompt Injection with Preference Optimization](https://arxiv.org/abs/2410.05451) | CCS 2025 (UC Berkeley + Meta) | Trains LLMs via DPO on (clean, adversarial) preference pairs to prefer the intended instruction; <10% ASR even on attacks unseen during training; basis of open-source Meta-SecAlign-70B |
 
 ---
 
