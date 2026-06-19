@@ -80,7 +80,9 @@ Most existing awesome-security lists are **paper graveyards** — long, flat, ha
 
 ---
 
-## 0. Surveys & Position Papers
+## 📚 0. Surveys & Position Papers
+
+> Comprehensive surveys and position papers that map the landscape of agentic security threats and defenses.
 
 | Paper | Venue | Commentary |
 |-------|-------|------------|
@@ -94,9 +96,11 @@ Most existing awesome-security lists are **paper graveyards** — long, flat, ha
 
 ---
 
-## 1. Attacks by Entry Point
+## ⚔️ 1. Attacks
 
-### 1.1 Direct Prompt Injection
+### 1.1 Direct Prompt Injection 🎯
+
+> Attacks where the adversary has **direct control over user-side input** to the agent.
 
 The attacker controls the user-facing input to the agent directly.
 
@@ -109,7 +113,9 @@ The attacker controls the user-facing input to the agent directly.
 
 ---
 
-### 1.2 Indirect Prompt Injection
+### 1.2 Indirect Prompt Injection 🕳️
+
+> Malicious instructions hidden in the **environment** (web pages, emails, tool outputs) that the agent unwittingly reads as commands.
 
 Malicious instructions are embedded in content the agent retrieves from the environment (web pages, emails, documents, API responses).
 
@@ -126,7 +132,9 @@ Malicious instructions are embedded in content the agent retrieves from the envi
 
 ---
 
-### 1.3 Memory & RAG Poisoning
+### 1.3 Memory & RAG Poisoning ☠️
+
+> Attacks on the agent's **long-term memory or RAG knowledge base** — poison once, trigger many times.
 
 The attacker corrupts the agent's external memory or knowledge base, causing retrieval of malicious content at inference time.
 
@@ -139,7 +147,9 @@ The attacker corrupts the agent's external memory or knowledge base, causing ret
 
 ---
 
-### 1.4 Tool & MCP Poisoning
+### 1.4 Tool & MCP Poisoning 🔧
+
+> Attacks targeting **tool descriptions** (e.g., MCP server metadata) rather than data itself.
 
 The attacker compromises tools, plugins, or MCP servers that the agent calls, injecting malicious instructions through tool outputs or descriptions.
 
@@ -152,7 +162,9 @@ The attacker compromises tools, plugins, or MCP servers that the agent calls, in
 
 ---
 
-### 1.5 Backdoor Attacks
+### 1.5 Backdoor Attacks 🚪
+
+> Hidden triggers planted via **training data, few-shot demonstrations, or reasoning chains** that activate malicious behavior on demand.
 
 The attacker poisons training data or few-shot demonstrations so that a trigger at inference time causes malicious behavior.
 
@@ -166,7 +178,9 @@ The attacker poisons training data or few-shot demonstrations so that a trigger 
 
 ---
 
-### 1.6 Multi-Agent Propagation
+### 1.6 Multi-Agent Propagation 🦠
+
+> Adversarial instructions that **spread across multiple agents** like a worm or virus.
 
 In multi-agent systems, a compromised agent can spread malicious instructions to other agents through shared context, messages, or tool calls.
 
@@ -180,9 +194,11 @@ In multi-agent systems, a compromised agent can spread malicious instructions to
 
 ---
 
-## 2. Defenses
+## 🛡️ 2. Defenses
 
-### 2.1 Input Filtering & Guardrails
+### 2.1 Input Filtering & Guardrails 🚧
+
+> Defenses applied at the **input side**: classifiers, provenance markers, task-alignment verification, dual-execution detection.
 
 | Paper / Tool | Venue | Commentary |
 |-------|-------|------------|
@@ -197,7 +213,9 @@ In multi-agent systems, a compromised agent can spread malicious instructions to
 
 ---
 
-### 2.2 Instruction Hierarchy
+### 2.2 Instruction Hierarchy 📜
+
+> Train the LLM to **respect a privilege hierarchy** (system > developer > user > tool) via SFT or preference optimization.
 
 Enforcing that instructions from higher-privilege sources (system > developer > user > environment) cannot be overridden by lower-privilege ones.
 
@@ -210,7 +228,9 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 
 ---
 
-### 2.3 Sandboxing & Permission Control
+### 2.3 Sandboxing & Permission Control 📦
+
+> **System-architecture** defenses: capability control, per-app isolation, fine-grained permission policies.
 
 | Paper / Tool | Venue | Commentary |
 |-------|-------|------------|
@@ -222,7 +242,9 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 
 ---
 
-### 2.4 Multi-Agent Trust Protocols
+### 2.4 Multi-Agent Trust Protocols 🤝
+
+> Defenses designed specifically for **multi-agent systems** — anomaly detection, trust protocols, topological intervention.
 
 | Paper | Venue | Commentary |
 |-------|-------|------------|
@@ -232,7 +254,9 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 
 ---
 
-## 3. Benchmarks & Evaluation
+## 📏 3. Benchmarks & Evaluation
+
+> Standardized benchmarks and evaluation frameworks for measuring agent security.
 
 | Benchmark | Venue | What it measures | Limitation |
 |-----------|-------|-----------------|------------|
@@ -247,7 +271,9 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 
 ---only
 
-## 4. Tools & Frameworks
+## 🧰 4. Tools & Frameworks
+
+> Open-source tools and frameworks for deploying agent security in production.
 
 | Tool | Description |
 |------|-------------|
