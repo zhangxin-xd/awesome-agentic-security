@@ -25,24 +25,36 @@ Most existing awesome-security lists are **paper graveyards** — long, flat, ha
 
 ---
 
-## Contents
+## 📖 News
 
-- [0. Surveys & Position Papers](#0-surveys--position-papers)
-- [1. Attacks by Entry Point](#1-attacks-by-entry-point)
-  - [1.1 Direct Prompt Injection](#11-direct-prompt-injection)
-  - [1.2 Indirect Prompt Injection](#12-indirect-prompt-injection)
-  - [1.3 Memory & RAG Poisoning](#13-memory--rag-poisoning)
-  - [1.4 Tool & MCP Poisoning](#14-tool--mcp-poisoning)
-  - [1.5 Backdoor Attacks](#15-backdoor-attacks)
-  - [1.6 Multi-Agent Propagation](#16-multi-agent-propagation)
-- [2. Defenses](#2-defenses)
-  - [2.1 Input Filtering & Guardrails](#21-input-filtering--guardrails)
-  - [2.2 Instruction Hierarchy](#22-instruction-hierarchy)
-  - [2.3 Sandboxing & Permission Control](#23-sandboxing--permission-control)
-  - [2.4 Multi-Agent Trust Protocols](#24-multi-agent-trust-protocols)
-- [3. Benchmarks & Evaluation](#3-benchmarks--evaluation)
-- [4. Tools & Frameworks](#4-tools--frameworks)
-- [Contributing](#contributing)
+- **[2026-06-15]** Added **BadChain** (§1.5), **DemonAgent** (§1.5), **SecAlign** (§2.2)
+- **[2026-06-08]** Added **Imprompter** (§1.1), **MELON** (§2.1), **WASP** (§3)
+- **[2026-05-25]** Major update: **15 agent safety classics** across §0–§2.4 + fixed README errors
+- **[2026-05-17]** Added 5 recent top-venue papers (multimodal attacks + CVE-Bench + AgentFuzz)
+- **[2026-05-13]** 🎉 Initial release with 8 foundational papers
+
+## 📊 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=zhangxin-xd/awesome-agentic-security&type=Date)](https://star-history.com/#zhangxin-xd/awesome-agentic-security&Date)
+
+## 🌟 Contents
+
+- [📚 Surveys & Position Papers](#-0-surveys--position-papers)
+- [⚔️ Attacks](#%EF%B8%8F-1-attacks)
+  - [Direct Prompt Injection](#11-direct-prompt-injection-)
+  - [Indirect Prompt Injection](#12-indirect-prompt-injection-%EF%B8%8F)
+  - [Memory & RAG Poisoning](#13-memory--rag-poisoning-%EF%B8%8F)
+  - [Tool & MCP Poisoning](#14-tool--mcp-poisoning-)
+  - [Backdoor Attacks](#15-backdoor-attacks-)
+  - [Multi-Agent Propagation](#16-multi-agent-propagation-)
+- [🛡️ Defenses](#%EF%B8%8F-2-defenses)
+  - [Input Filtering & Guardrails](#21-input-filtering--guardrails-)
+  - [Instruction Hierarchy](#22-instruction-hierarchy-)
+  - [Sandboxing & Permission Control](#23-sandboxing--permission-control-)
+  - [Multi-Agent Trust Protocols](#24-multi-agent-trust-protocols-)
+- [📏 Benchmarks & Evaluation](#-3-benchmarks--evaluation)
+- [🧰 Tools & Frameworks](#-4-tools--frameworks)
+- [🤝 Contributing](#-contributing)
 
 ---
 
