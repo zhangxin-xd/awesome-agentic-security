@@ -1,23 +1,27 @@
 # 🛡️ Awesome Agentic Security
 
-> A curated list of papers, benchmarks, tools, and resources on the security of agentic AI systems — organized by **attack entry point**, with concise commentary on contributions and limitations.
+[![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome)
+[![GitHub stars](https://img.shields.io/github/stars/zhangxin-xd/awesome-agentic-security?style=flat&logo=github&color=yellow)](https://github.com/zhangxin-xd/awesome-agentic-security/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/zhangxin-xd/awesome-agentic-security?style=flat&logo=github&color=blue)](https://github.com/zhangxin-xd/awesome-agentic-security/network/members)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Last Updated](https://img.shields.io/badge/updated-Jun%202026-orange)](https://github.com/zhangxin-xd/awesome-agentic-security/commits/main)
+[![Papers](https://img.shields.io/badge/papers-54-red)](https://github.com/zhangxin-xd/awesome-agentic-security)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/zhangxin-xd/awesome-agentic-security/pulls)
+[![Scope](https://img.shields.io/badge/scope-agentic%20security-purple)](https://github.com/zhangxin-xd/awesome-agentic-security)
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-![Last Updated](https://img.shields.io/badge/updated-May%202026-blue)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)
-![Scope](https://img.shields.io/badge/scope-agentic%20security-orange)
+> A curated list of papers, benchmarks, tools, and resources on the **security of agentic AI systems** — organized by **attack entry point** with one-line notes on contribution and limitation.
 
 ---
 
-## Why This List?
+## Why this list?
 
-Most existing awesome lists on agent safety are **paper dumps** — long, flat, and hard to navigate. This list is different:
+Most existing awesome-security lists are **paper graveyards** — long, flat, hard to navigate. This list is different:
 
-- 📌 **Organized by attack entry point** — so you know *where* the threat comes from
-- 💬 **Each entry has a one-line commentary** — what it contributes, and what it misses
-- 👥 **Useful for both researchers and engineers** — papers and tools side by side
+- 📌 **Organized by attack entry point** — so you know *where* the threat enters
+- 💬 **One sentence per entry** — what it contributed, what it left open
+- 👥 **Useful for both researchers and engineers** — papers *and* tools side by side
 
-**Scope**: Agentic AI systems (single and multi-agent). We cover attacks, defenses, benchmarks, and tools specific to agentic settings. We do *not* cover general LLM safety (jailbreaks without agent context) or embodied/robotics safety.
+**Scope:** Agentic AI systems (single- and multi-agent). We cover attacks against the agentic setting, defenses, benchmarks, and tools. We do **not** cover general LLM safety (jailbreaks with no agent context) or embodied/robotic safety.
 
 ---
 
