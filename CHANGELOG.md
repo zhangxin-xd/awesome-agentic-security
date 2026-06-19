@@ -3,6 +3,29 @@
 All additions and rejections are logged here. Most recent entries appear first.
 
 ---
+## 2026-06-15
+
+### Added (3 papers, batch update)
+
+#### §1.5 Backdoor Attacks
+- [BadChain](https://arxiv.org/abs/2401.12242) → §1.5 | First backdoor attack against CoT prompting via demonstration poisoning; 97% ASR on GPT-4
+  - Source: ICLR 2024 (UIUC + UW, Bo Li / Radha Poovendran groups)
+  - Reason: Top venue ICLR; foundational CoT-backdoor work; §1.5 was severely underpopulated with only 2 entries
+
+- [DemonAgent](https://arxiv.org/abs/2502.12575) → §1.5 | Dynamically encrypted multi-backdoor implantation; ~100% ASR with 0% detection rate; releases AgentBackdoorEval dataset
+  - Source: EMNLP Findings 2025
+  - Reason: Top venue; demonstrates that current safety audits fail against multi-fragment backdoors; provides accompanying benchmark
+
+#### §2.2 Instruction Hierarchy
+- [SecAlign](https://arxiv.org/abs/2410.05451) → §2.2 | DPO-based training on adversarial preference pairs; <10% ASR on unseen attacks; basis of open-source Meta-SecAlign-70B
+  - Source: CCS 2025 (UC Berkeley + Meta, Sizhe Chen / David Wagner / Chuan Guo)
+  - Reason: Top-tier security venue CCS; preference-optimization paradigm complementary to Instruction Hierarchy and StruQ; powering Meta's open-source secure LLM release
+
+### Considered but Rejected
+
+- [AutoBackdoor (arXiv 2511.16709)](https://arxiv.org/abs/2511.16709) | Reason: Automating backdoor attacks via LLM agents is novel angle but not yet at a top venue and citation count low
+- [SkillTrojan (arXiv 2604.06811)](https://arxiv.org/abs/2604.06811) | Reason: Skill-based agent backdoor; interesting niche but currently no venue acceptance
+
 ## 2026-06-08
 
 ### Added (3 papers, batch update)
