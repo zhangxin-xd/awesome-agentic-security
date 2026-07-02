@@ -3,6 +3,35 @@
 All additions and rejections are logged here. Most recent entries appear first.
 
 ---
+## 2026-06-22
+
+### Added (4 papers, batch update)
+
+#### §1.4 Tool & MCP Poisoning
+- [MPMA](https://arxiv.org/abs/2505.11154) → §1.4 | First MCP preference manipulation attack; GAPMA (genetic algorithm variant) achieves 100% ASR
+  - Source: AAAI 2026
+  - Reason: Top venue AAAI; introduces economically motivated attack angle (attackers profit from paid MCP services); complements MCPTox by targeting tool selection rather than execution
+
+#### §1.6 Multi-Agent Propagation
+- [Agent Smith](https://arxiv.org/abs/2402.08567) → §1.6 | Single adversarial image spreads exponentially to 1M+ multimodal agents; coined "infectious jailbreak"
+  - Source: ICML 2024 (Sea AI Lab, Min Lin's group)
+  - Reason: Top venue ICML; 250+ citations; naming authority — "infectious jailbreak" is now a standard research term followed by Cowpox, INFA-Guard, and related defense work
+
+#### §2.3 Sandboxing & Permission Control
+- [ETDI](https://arxiv.org/abs/2506.01333) → §2.3 | Enhanced Tool Definition Interface with cryptographic signing + immutable versioning + OAuth 2.0 scopes for MCP
+  - Source: arXiv 2025 (AWS + Intuit + OWASP practitioners)
+  - Reason: Industry-grade proposal directly countering rug pull and tool squatting; cited by MCP-Guard, MCPSECBENCH, and the SoK MCP survey; fills the MCP defense gap in §2.3
+
+#### §4 Tools & Frameworks
+- [MCP-Scan](https://github.com/invariantlabs-ai/mcp-scan) → §4 | Open-source MCP security scanner from Invariant Labs (Snyk acquired 2025); 2,000+ GitHub stars
+  - Source: Invariant Labs (ETH Zurich spin-off, co-founded by Tramèr et al.)
+  - Reason: Most widely adopted MCP scanner; Apache-2.0; supports major MCP clients (Claude Desktop, Cursor, Windsurf); Snyk acquisition validates industry impact
+
+### Considered but Rejected
+
+- [MCP-Guard (arXiv 2508.10991)](https://arxiv.org/abs/2508.10991) | Reason: Solid multi-stage MCP defense but overlaps significantly with ETDI on threat model; defer until published at venue
+- [GuardAgent (arXiv 2406.09187)](https://arxiv.org/abs/2406.09187) | Reason: Interesting "guard agent guards agent" concept but currently no top-venue acceptance; revisit if published at ACL/NeurIPS
+
 ## 2026-06-15
 
 ### Added (3 papers, batch update)
