@@ -157,6 +157,7 @@ The attacker compromises tools, plugins, or MCP servers that the agent calls, in
 |-------|-------|------------|
 | [ToolSword: Unveiling Safety Issues of LLMs in Tool Learning](https://arxiv.org/abs/2402.10753) | ACL 2024 | Identifies safety issues across three stages: tool selection, calling, and result handling; good taxonomy |
 | [MCPTox: A Benchmark for Tool Poisoning Attack on Real-World MCP Servers](https://arxiv.org/abs/2508.14925) | AAAI 2026 | 45+ real-world MCP servers across 8 domains |
+| [MPMA: Preference Manipulation Attack Against Model Context Protocol](https://arxiv.org/abs/2505.11154) | AAAI 2026 | Malicious MCP server manipulates LLM to prioritize it over competitors via crafted metadata; genetic-algorithm variant (GAPMA) achieves 100% ASR even with 11 competing servers; economically motivated (ad revenue) |
 | [Compromising Agents via MCP](https://invariantlabs.ai/blog/mcp-security) | Invariant Labs 2025 | Practical demonstration of tool poisoning via MCP; covers cross-tool contamination and rug pulls |
 | [LLM Platform Security: Applying a Systematic Evaluation Framework to OpenAI's ChatGPT Plugins](https://arxiv.org/abs/2307.09902) | AIES 2024 | Early plugin security analysis; now superseded by MCP-era work but useful for baseline comparison |
 
@@ -191,6 +192,7 @@ In multi-agent systems, a compromised agent can spread malicious instructions to
 | [NetSafe: Exploring the Topological Safety of Multi-agent Networks](https://arxiv.org/abs/2410.15686) | ACL Findings 2025 | Identifies "Agent Hallucination" and "Aggregation Safety" phenomena |
 | [PsySafe: Psychological-based Attack, Defense, and Evaluation of Multi-agent System Safety](https://arxiv.org/abs/2401.11401) | ACL 2024 | Unique angle: uses psychological manipulation to compromise agent personas; underexplored threat vector |
 | [Evil Geniuses: Delving into the Safety of LLM-based Agents](https://arxiv.org/abs/2311.11855) | arXiv 2023 | Early multi-agent safety analysis; broad but surface-level by current standards |
+| [Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast](https://arxiv.org/abs/2402.08567) | ICML 2024 (Sea AI Lab) | Coined the term "infectious jailbreak"; a single adversarial image in one agent's memory spreads exponentially to 1M+ LLaVA agents; provides theoretical principle for provable containment |
 
 ---
 
@@ -239,6 +241,7 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 | [IsolateGPT: An Execution Isolation Architecture for LLM-Based Agentic Systems](https://arxiv.org/abs/2403.04960) | NDSS 2025 | Per-app isolation with spoke-and-hub orchestration + separate memory banks |
 | [Progent: Programmable Privilege Control for LLM Agents](https://arxiv.org/abs/2504.11703) | arXiv 2025 | DSL for fine-grained tool-call policies with LLM-generated rules |
 | [TrustAgent: Towards Safe and Trustworthy LLM-based Agents](https://arxiv.org/abs/2402.01586) | arXiv 2024 | Agent constitution approach to limit excessive agency; still relies on LLM self-regulation |
+| [ETDI: Mitigating Tool Squatting and Rug Pull Attacks in MCP](https://arxiv.org/abs/2506.01333) | arXiv 2025 (AWS + Intuit + OWASP) | Enhanced Tool Definition Interface with cryptographic signing + immutable versioning + OAuth 2.0 scopes; directly counters tool squatting and rug pull; industry-grade design, no academic benchmark evaluation yet |
 
 ---
 
@@ -283,6 +286,7 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 | [Garak](https://github.com/NVIDIA/garak) | LLM vulnerability scanner; some agent-specific probes |
 | [PromptBench](https://github.com/microsoft/promptbench) | Robustness evaluation; useful baseline for injection testing |
 | [AgentFuzz](https://www.usenix.org/conference/usenixsecurity25/presentation/liu-fengyu) | fuzzing framework for taint-style vulnerability detection; discovered  vulnerabilities (USENIX Security 2025) |
+| [MCP-Scan](https://github.com/invariantlabs-ai/mcp-scan) | Invariant Labs 2025 (acquired by Snyk) | Open-source security scanner for MCP configurations; detects tool poisoning, rug pull (via tool pinning), cross-origin escalation, prompt injection; 2,000+ GitHub stars; supports Claude Desktop/Cursor/Windsurf |
 
 ---
 
