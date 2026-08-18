@@ -3,6 +3,47 @@
 All additions and rejections are logged here. Most recent entries appear first.
 
 ---
+## 2026-06-29
+
+### Added (6 papers, batch update)
+
+#### §1.1 Direct Prompt Injection
+- [BrowserART](https://arxiv.org/abs/2410.13886) → §1.1 | 100 browser harmful behaviors; GPT-4o attempts 98/100 as browser agent
+  - Source: ICLR 2025 (Scale AI Red Team + CMU, Zico Kolter / Matt Fredrikson)
+  - Reason: Top venue ICLR; landmark result that refusal training doesn't transfer to agentic contexts; widely cited by OS-Harm, WebGuard, HarmonyGuard
+
+#### §1.3 Memory & RAG Poisoning
+- [Phantom](https://arxiv.org/abs/2405.20485) → §1.3 | Single-document trigger backdoor for RAG; enables DoS/privacy/harmful outputs on trigger
+  - Source: ACM TAIP 2026 (Northeastern + Google DeepMind, Alina Oprea / Milad Nasr / Choquette-Choo)
+  - Reason: Journal + industry-heavyweight authors; complements PoisonedRAG (multi-doc) and AgentPoison (embedding-optimized) with a trigger-conditioned single-doc angle
+
+#### §2.1 Input Filtering & Guardrails
+- [GuardAgent](https://arxiv.org/abs/2406.09187) → §2.1 | First guard-agent-safeguards-agent framework; >98% and 83% guardrail accuracy on healthcare and web benchmarks
+  - Source: ICML 2025 (UChicago + Berkeley, Bo Li / Dawn Song)
+  - Reason: Top venue ICML; pioneers "meta-agent as guardrail" paradigm; also introduces EICU-AC and Mind2Web-SC benchmarks
+
+#### §2.4 Multi-Agent Trust Protocols
+- [BlindGuard](https://arxiv.org/abs/2508.08127) → §2.4 | Unsupervised MAS defense; detects PI/TA/MA without labels
+  - Source: ACL 2026 (Jilin University + Griffith + UNSW)
+  - Reason: Top venue ACL; complementary to G-Safeguard (supervised) — enables practical deployment where labeled malicious traces are unavailable
+
+#### §3 Benchmarks & Evaluation
+- [ST-WebAgentBench](https://arxiv.org/abs/2410.06703) → §3 | 375 enterprise tasks × 3,057 policies; new Completion under Policy (CuP) metric
+  - Source: ICLR 2026 (IBM Research Haifa)
+  - Reason: Top venue ICLR; complements WASP (Meta) with enterprise-focused, policy-heavy evaluation; introduces widely-adopted CuP metric
+
+#### §4 Tools & Frameworks
+- [LlamaFirewall](https://arxiv.org/abs/2505.03574) → §4 | Meta's open-source three-layer agent guardrail (PromptGuard 2 + AlignmentCheck + CodeShield); AgentDojo ASR 17.6% → 1.7%
+  - Source: Meta AI 2025
+  - Reason: Industry-grade open-source release from Meta; already the reference framework for AgentDojo defenses; LangChain integration; complements Invariant's MCP-Scan
+
+### Considered but Rejected
+
+- [BadRAG (arXiv 2406.00083)](https://arxiv.org/abs/2406.00083) | Reason: Solid trigger-based RAG backdoor, but Phantom (higher venue + stronger single-doc claim) covers similar territory more compactly
+- [AutoDefense duplicate check: keep as-is](#) | Reason: N/A
+- [BrowserGym as a tool](#) | Reason: General-purpose web agent framework, not a security tool; belongs in agent-capability lists
+
+---
 ## 2026-06-22
 
 ### Added (4 papers, batch update)
