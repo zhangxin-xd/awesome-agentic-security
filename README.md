@@ -110,7 +110,7 @@ The attacker controls the user-facing input to the agent directly.
 | [AgentHarm: A Benchmark for Direct Misuse of LLM Agents](https://arxiv.org/abs/2410.09024) | ICLR 2025 | Focuses on direct harmful requests (not adversarial injection); fills a gap vs. indirect-focused benchmarks |
 | [Jailbreaking Leading Safety-Aligned LLMs with Simple Adaptive Attacks](https://arxiv.org/abs/2404.02151) | ICLR 2025 | Shows adaptive attacks break most existing defenses; highlights the fragility of guardrail-only approaches |
 | [Imprompter: Tricking LLM Agents into Improper Tool Use](https://arxiv.org/abs/2410.14923) | arXiv 2024 (UCSD, Fernandes group) | Automatically generates obfuscated adversarial prompts that hijack production agents (Mistral LeChat, ChatGLM) to exfiltrate PII; ~80% end-to-end ASR; led to real CVE-style mitigation by Mistral |
-
+| [Refusal-Trained LLMs Are Easily Jailbroken As Browser Agents (BrowserART)](https://arxiv.org/abs/2410.13886) | ICLR 2025 (Scale AI + CMU + Zico Kolter) | 100 browser-related harmful behaviors; refusal-trained LLMs (GPT-4o, o1-preview) attempt 98/100 and 63/100 harmful actions as browser agents; chat-time safety training fails to transfer |
 ---
 
 ### 1.2 Indirect Prompt Injection 🕳️
@@ -144,7 +144,7 @@ The attacker corrupts the agent's external memory or knowledge base, causing ret
 | [AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases](https://arxiv.org/abs/2407.12784) | NeurIPS 2024 | Extends RAG poisoning to full agent pipelines; shows memory poisoning transfers across agent tasks |
 | [Backdoored Retrievers for Prompt Injection Attacks on RAG](https://arxiv.org/abs/2410.14479) | arXiv 2024 | Targets the retriever component itself rather than the corpus; harder to detect than corpus poisoning |
 | [Hidden in the Metadata: Stealth Poisoning Attacks on Multimodal Retrieval-Augmented Generation](https://arxiv.org/abs/2603.00172) | arXiv 2026 | Image-intact metadata-only poisoning ; bypasses query paraphrasing and consistency checks |
-
+| [Phantom: General Trigger Attacks on Retrieval Augmented Language Generation](https://arxiv.org/abs/2405.20485) | ACM TAIP 2026 (Northeastern + Google DeepMind) | Single-document backdoor via trigger-conditioned retrieval + GCG-style suffix; enables DoS, privacy leaks, harmful outputs on trigger match; benign queries unaffected |
 ---
 
 ### 1.4 Tool & MCP Poisoning 🔧
@@ -211,7 +211,7 @@ In multi-agent systems, a compromised agent can spread malicious instructions to
 | [The Task Shield: Enforcing Task Alignment to Defend Against Indirect Prompt Injection in LLM Agents](https://arxiv.org/abs/2412.16682) | ACL 2025 | Task-alignment verification |
 | [MELON: Provable Defense Against Indirect Prompt Injection Attacks in AI Agents](https://arxiv.org/abs/2502.05174) | ICML 2025 | Dual-execution detection — re-runs the agent with a masked user prompt and flags an attack if tool calls match; outperforms SOTA on AgentDojo; adds inference cost |
 | [Prompt Guard 2](https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-86M) | Meta 2025 | Lightweight classifier for injection detection; fast but struggles with indirect/obfuscated injections |
-
+| [GuardAgent: Safeguard LLM Agents via Knowledge-Enabled Reasoning](https://arxiv.org/abs/2406.09187) | ICML 2025 (UChicago + Berkeley, Bo Li / Dawn Song) | First "guard agent guards agent" — analyzes safety requests, generates guardrail code, executes deterministically; >98% and 83% guardrail accuracy on EICU-AC and Mind2Web-SC; requires manually-authored guard requests |
 
 ---
 
@@ -254,7 +254,7 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 | [Securing Multi-Agent Systems](https://arxiv.org/abs/2504.16902) | arXiv 2026 | Systematic threat landscape of MAS; 193 threat items across 9 categories; evaluates 16 frameworks |
 | [G-Safeguard: A Topology-Guided Security Lens for LLM-MAS](https://arxiv.org/abs/2502.11127) | ACL 2025 | GNN-based anomaly detection on multi-agent utterance graphs + topological intervention |
 | [AutoDefense: Multi-Agent LLM Defense against Jailbreak Attacks](https://arxiv.org/abs/2403.04783) | arXiv 2024 | Uses a multi-agent pipeline to filter malicious outputs; adds latency overhead |
-
+| [BlindGuard: Safeguarding LLM-based Multi-Agent Systems under Unknown Attacks](https://arxiv.org/abs/2508.08127) | ACL 2026 | First unsupervised MAS defense — hierarchical agent encoder + corruption-guided detector trained only on normal behavior; detects prompt injection, tool attack, memory attack without labels; complements G-Safeguard |
 ---
 
 ## 📏 3. Benchmarks & Evaluation
@@ -271,6 +271,7 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 | [WASP](https://arxiv.org/abs/2504.18575) | arXiv 2025 | Web agent prompt injection | Web-only scope |
 | [CVE-Bench](https://arxiv.org/abs/2503.17332) | ICML 2025 Spotlight | Agent offensive capability | Web app vulnerabilities only; measures attack capability |
 | [WASP](https://arxiv.org/abs/2504.18575) | NeurIPS 2025 D&B (Meta FAIR) | Realistic end-to-end web-agent prompt injection benchmark | Attacker constrained to plausible site-user capabilities; only web tasks |
+| [ST-WebAgentBench](https://arxiv.org/abs/2410.06703) | ICLR 2026 (IBM Research) | 375 enterprise web tasks × 3,057 policies across 6 ST dimensions; introduces Completion under Policy (CuP) — SOTA agents' CuP is <2/3 their nominal completion rate | Enterprise scenarios only; policy-authoring assumed |
 
 ---only
 
@@ -287,7 +288,7 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 | [PromptBench](https://github.com/microsoft/promptbench) | Robustness evaluation; useful baseline for injection testing |
 | [AgentFuzz](https://www.usenix.org/conference/usenixsecurity25/presentation/liu-fengyu) | fuzzing framework for taint-style vulnerability detection; discovered  vulnerabilities (USENIX Security 2025) |
 | [MCP-Scan](https://github.com/invariantlabs-ai/mcp-scan) | Invariant Labs 2025 (acquired by Snyk) | Open-source security scanner for MCP configurations; detects tool poisoning, rug pull (via tool pinning), cross-origin escalation, prompt injection; 2,000+ GitHub stars; supports Claude Desktop/Cursor/Windsurf |
-
+| [LlamaFirewall](https://arxiv.org/abs/2505.03574) | Meta 2025 | Open-source three-layer guardrail: PromptGuard 2 (jailbreak classifier) + AlignmentCheck (CoT auditor) + CodeShield (static analyzer); reduces AgentDojo ASR from 17.6% to 1.7%; integrates with LangChain |
 ---
 
 ## Contributing
