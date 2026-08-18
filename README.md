@@ -27,6 +27,7 @@ Most existing awesome-security lists are **paper graveyards** — long, flat, ha
 
 ## 📖 News
 
+- **[2026-06-29]** Added **BrowserART** (§1.1), **Phantom** (§1.3), **GuardAgent** (§2.1), **BlindGuard** (§2.4), **ST-WebAgentBench** (§3), **LlamaFirewall** (§4)
 - **[2026-06-15]** Added **BadChain** (§1.5), **DemonAgent** (§1.5), **SecAlign** (§2.2)
 - **[2026-06-08]** Added **Imprompter** (§1.1), **MELON** (§2.1), **WASP** (§3)
 - **[2026-05-25]** Major update: **15 agent safety classics** across §0–§2.4 + fixed README errors
