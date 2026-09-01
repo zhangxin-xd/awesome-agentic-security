@@ -4,8 +4,8 @@
 [![GitHub stars](https://img.shields.io/github/stars/zhangxin-xd/awesome-agentic-security?style=flat&logo=github&color=yellow)](https://github.com/zhangxin-xd/awesome-agentic-security/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/zhangxin-xd/awesome-agentic-security?style=flat&logo=github&color=blue)](https://github.com/zhangxin-xd/awesome-agentic-security/network/members)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Last Updated](https://img.shields.io/badge/updated-Jun%202026-orange)](https://github.com/zhangxin-xd/awesome-agentic-security/commits/main)
-[![Papers](https://img.shields.io/badge/papers-54-red)](https://github.com/zhangxin-xd/awesome-agentic-security)
+[![Last Updated](https://img.shields.io/badge/updated-Sep%202026-orange)](https://github.com/zhangxin-xd/awesome-agentic-security/commits/main)
+[![Papers](https://img.shields.io/badge/papers-82-red)](https://github.com/zhangxin-xd/awesome-agentic-security)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/zhangxin-xd/awesome-agentic-security/pulls)
 [![Scope](https://img.shields.io/badge/scope-agentic%20security-purple)](https://github.com/zhangxin-xd/awesome-agentic-security)
 
@@ -88,12 +88,15 @@ Most existing awesome-security lists are **paper graveyards** — long, flat, ha
 | Paper | Venue | Commentary |
 |-------|-------|------------|
 | [A Survey on LLM-based Autonomous Agents](https://arxiv.org/abs/2308.11432) | arXiv 2023 | Good overview of agent architectures; safety treated as an afterthought |
-| [Evil Geniuses: Delving into the Safety of LLM-based Agents](https://arxiv.org/abs/2311.11855) | arXiv 2023 | Early systematic look at agent-specific risks; taxonomy is now partially outdated |
 | [Agent Security Bench (ASB)](https://arxiv.org/abs/2410.02644) | ICLR 2025 | Most comprehensive formalization of attack types; 10 attack scenarios, 10 agents, 398 adversarial environments |
 | [A Comprehensive Survey in LLM(-Agent) Full Stack Safety](https://arxiv.org/abs/2407.01003) | arXiv 2025 | Covers the full lifecycle; broad but less deep on agent-specific entry points |
 | [Personal LLM Agents: Insights and Survey about the Capability, Efficiency and Security](https://arxiv.org/abs/2401.05459) | arXiv 2024 | On-device personal agent survey with dedicated security/privacy section; broad rather than deep on attack mechanisms |
 | [Model Context Protocol (MCP): Landscape, Security Threats, and Future Research Directions](https://arxiv.org/abs/2503.23278) | ACM TOSEM 2025 | First systematic MCP security survey |
 | [Practices for Governing Agentic AI Systems](https://openai.com/index/practices-for-governing-agentic-ai/) | OpenAI 2023 | Industry perspective from OpenAI; useful framing for deployment-level governance |
+| [Open Challenges in Multi-Agent Security](https://arxiv.org/abs/2505.02077) | arXiv 2025 | Defines multi-agent security (MASEC) as a field — 9 threat classes, 7 attack axes, 3-layer governance; position paper, no experiments |
+| [Comprehensive Vulnerability Analysis is Necessary for Trustworthy LLM-MAS](https://arxiv.org/abs/2506.01245) | arXiv 2025 | Formalizes how single-agent flaws plus inter-agent communication create threat models absent in single agents; analysis only, no benchmark |
+| [Architecture Matters for Multi-Agent Security](https://arxiv.org/abs/2604.23459) | ICML 2026 | Systematic empirical study — attack success varies up to 3.8x across topologies, no universally optimal architecture; single-agent alignment doesn't transfer |
+| [Seven Security Challenges in Cross-domain Multi-Agent LLM Systems](https://arxiv.org/abs/2505.23847) | npj AI 2026 | Nature-family position paper naming seven cross-domain challenges incl. collusion and conflict-of-interest; conceptual, no experiments |
 
 ---
 
@@ -126,7 +129,7 @@ Malicious instructions are embedded in content the agent retrieves from the envi
 | [InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated LLM Agents](https://arxiv.org/abs/2403.02691) | ACL Findings 2024 | ReAct-prompted GPT-4 vulnerable 24% of the time; single-turn only, superseded by AgentDojo for multi-step |
 | [EIA: Environmental Injection Attack on Generalist Web Agents for Privacy Leakage](https://arxiv.org/abs/2409.11295) | ICLR 2025 | Invisible HTML form fields trick web agents into typing PII into attacker-controlled fields |
 | [AgentDojo: A Dynamic Environment to Evaluate Attacks and Defenses for LLM Agents](https://arxiv.org/abs/2406.13352) | NeurIPS 2024 | Best current benchmark for indirect injection; realistic task environments but limited to web/email scenarios |
-| [WASP: Benchmarking Web Agent Security Against Prompt Injection Attacks](https://arxiv.org/abs/2504.18575) | arXiv 2025 | Specifically targets web navigation agents; more realistic threat model than AgentDojo |
+| [WASP: Benchmarking Web Agent Security Against Prompt Injection Attacks](https://arxiv.org/abs/2504.18575) | NeurIPS 2025 D&B | Specifically targets web navigation agents; more realistic threat model than AgentDojo |
 | [(Ab)using Images and Sounds for Indirect Instruction Injection in Multi-modal LLMs](https://arxiv.org/abs/2307.10490) | arXiv 2023 | Extends indirect injection to non-text modalities; underexplored area |
 | [Dissecting Adversarial Robustness of Multimodal LM Agents](https://arxiv.org/abs/2406.12814) | ICLR 2025 | Imperceptible pixel perturbations ; ARE framework decomposes robustness |
 | [AdvAgent: Controllable Blackbox Red-teaming on Web Agents](https://arxiv.org/abs/2410.17401) | ICML 2025 | RL-trained adversarial prompter ; injects strings into invisible HTML fields |
@@ -188,12 +191,21 @@ In multi-agent systems, a compromised agent can spread malicious instructions to
 
 | Paper | Venue | Commentary |
 |-------|-------|------------|
-| [Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems](https://arxiv.org/abs/2410.07283) | arXiv 2025 | First paper to formalize cross-agent prompt injection propagation; shows exponential spread in large MAS |
+| [Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems](https://arxiv.org/abs/2410.07283) | ESORICS 2025 Workshop | First paper to formalize cross-agent prompt injection propagation; shows exponential spread in large MAS |
 | [Here Comes the AI Worm (Morris II)](https://arxiv.org/abs/2403.02817) | CCS 2025 | First self-replicating adversarial prompt against RAG-based GenAI ecosystems |
 | [NetSafe: Exploring the Topological Safety of Multi-agent Networks](https://arxiv.org/abs/2410.15686) | ACL Findings 2025 | Identifies "Agent Hallucination" and "Aggregation Safety" phenomena |
 | [PsySafe: Psychological-based Attack, Defense, and Evaluation of Multi-agent System Safety](https://arxiv.org/abs/2401.11401) | ACL 2024 | Unique angle: uses psychological manipulation to compromise agent personas; underexplored threat vector |
 | [Evil Geniuses: Delving into the Safety of LLM-based Agents](https://arxiv.org/abs/2311.11855) | arXiv 2023 | Early multi-agent safety analysis; broad but surface-level by current standards |
 | [Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast](https://arxiv.org/abs/2402.08567) | ICML 2024 (Sea AI Lab) | Coined the term "infectious jailbreak"; a single adversarial image in one agent's memory spreads exponentially to 1M+ LLaVA agents; provides theoretical principle for provable containment |
+| [MultiAgent Collaboration Attack: Adversarial Attacks in LLM Collaborations via Debate](https://arxiv.org/abs/2406.14711) | Findings of EMNLP 2024 | Adversarial agent in debate degrades collective accuracy; single System-Accuracy metric can't separate 'persuaded' from 'compromised' |
+| [Flooding Spread of Manipulated Knowledge in LLM-Based Multi-Agent Communities](https://arxiv.org/abs/2407.07791) | arXiv 2024 | Manipulated knowledge propagates through agent communities via trusted messages; two-stage persuasion attack in a realistic community setting |
+| [CORBA: Contagious Recursive Blocking Attacks on Multi-Agent Systems](https://arxiv.org/abs/2502.14529) | arXiv 2025 | Only attack with theoretical propagation guarantees; validated on AutoGen and Camel; exhausts resources via contagious recursion |
+| [Agents Under Siege: Breaking Pragmatic Multi-Agent LLM Systems with Optimized Prompt Attacks](https://arxiv.org/abs/2504.00218) | ACL 2025 | Max-flow/min-cost formalization of attack-path optimization; bypasses distributed defenses under bandwidth/latency limits; topology-agnostic ASR |
+| [Amplified Vulnerabilities: Structured Jailbreak Attacks on LLM-based Multi-Agent Debate](https://arxiv.org/abs/2504.16489) | arXiv 2025 | Shows debate systems are inherently more fragile than single agents; four fine-grained metrics but not cross-paper comparable |
+| [Secret Collusion among AI Agents: Multi-Agent Deception via Steganography](https://arxiv.org/abs/2402.07510) | NeurIPS 2024 | Foundational formalization of covert steganographic collusion between agents; theory-heavy, detection left largely open |
+| [Red-Teaming LLM Multi-Agent Systems via Communication Attacks (AiTM)](https://arxiv.org/abs/2502.14847) | Findings of ACL 2025 | Agent-in-the-Middle manipulates only the message channel, not agents; exposes MAS communication as the attack surface |
+| [Don't Trust Your Upstream: Topology-Guided Adversarial Propagation in LLM-MAS](https://arxiv.org/abs/2512.04129) | arXiv 2025 | Topology-guided propagation across 5 topologies x 3 MAS frameworks; 40-78% ASR swing shows topology governs security |
+| [Topology Matters: Measuring Memory Leakage in Multi-Agent LLMs](https://arxiv.org/abs/2512.04668) | Findings of ACL 2026 | Measures private-memory leakage across 6 topologies; fully-connected graphs maximize leakage; empirical, no defense proposed |
 
 ---
 
@@ -254,8 +266,21 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 |-------|-------|------------|
 | [Securing Multi-Agent Systems](https://arxiv.org/abs/2504.16902) | arXiv 2026 | Systematic threat landscape of MAS; 193 threat items across 9 categories; evaluates 16 frameworks |
 | [G-Safeguard: A Topology-Guided Security Lens for LLM-MAS](https://arxiv.org/abs/2502.11127) | ACL 2025 | GNN-based anomaly detection on multi-agent utterance graphs + topological intervention |
-| [AutoDefense: Multi-Agent LLM Defense against Jailbreak Attacks](https://arxiv.org/abs/2403.04783) | arXiv 2024 | Uses a multi-agent pipeline to filter malicious outputs; adds latency overhead |
-| [BlindGuard: Safeguarding LLM-based Multi-Agent Systems under Unknown Attacks](https://arxiv.org/abs/2508.08127) | ACL 2026 | First unsupervised MAS defense — hierarchical agent encoder + corruption-guided detector trained only on normal behavior; detects prompt injection, tool attack, memory attack without labels; complements G-Safeguard |
+| [AutoDefense: Multi-Agent LLM Defense against Jailbreak Attacks](https://arxiv.org/abs/2403.04783) | NeurIPS 2024 Workshop | Uses a multi-agent pipeline to filter malicious outputs; adds latency overhead |
+| [BlindGuard: Safeguarding LLM-based Multi-Agent Systems under Unknown Attacks](https://arxiv.org/abs/2508.08127) | arXiv 2025 | First unsupervised MAS defense — hierarchical agent encoder + corruption-guided detector trained only on normal behavior; detects prompt injection, tool attack, memory attack without labels; complements G-Safeguard |
+| [Breaking and Fixing Defenses Against Control-Flow Hijacking in Multi-Agent Systems](https://arxiv.org/abs/2510.17276) | ICLR 2026 | Shows existing MAS control-flow defenses are breakable, then proposes a fix; paired attack-and-defense analysis |
+| [On the Resilience of LLM-Based Multi-Agent Collaboration with Faulty Agents](https://arxiv.org/abs/2408.00989) | arXiv 2024 | Hierarchical structures degrade least (5.5%) vs fully-connected (10.5%) under faulty agents; studies faults, not adversaries |
+| [Multi-Agent Security Tax: Trading Off Security and Collaboration Capabilities](https://arxiv.org/abs/2502.19145) | AAAI 2025 | Empirically shows defenses that curb propagation also reduce collaboration; direct security-utility tradeoff evidence |
+| [SAC: Robust Multi-Agent LLMs under Byzantine Faults](https://arxiv.org/abs/2605.09076) | arXiv 2026 | Byzantine-fault-tolerance view complementary to prompt-injection framing; flags flawed confidence assumptions in prior BFT designs; abstract-level read |
+| [CP-WBFT: Rethinking the Reliability of Multi-Agent Systems - A Byzantine Fault Tolerance Perspective](https://arxiv.org/abs/2511.10400) | AAAI 2025 | Systematic 6-topology x 7-node x 1-6-malicious BFT evaluation; assumes Byzantine agents report confidence honestly (later contested) |
+| [AgentXposed: Who's the Mole?](https://arxiv.org/abs/2507.04724) | arXiv 2025 | Tests detection across 3 communication structures x 4 covert-attack paradigms; hierarchical structures aid anomaly localization |
+| [INFA-Guard: Infection-Aware Safeguarding against Malicious Propagation in LLM-MAS](https://arxiv.org/abs/2601.14667) | arXiv 2026 | First to treat infected benign agents as a distinct threat class; ~33% average ASR reduction across attacks and topologies |
+| [SentinelNet: Credit-Based Dynamic Threat Detection in Multi-Agent Systems](https://arxiv.org/abs/2510.16219) | WWW 2026 | Credit-scoring dynamically flags misbehaving agents; decentralized detection; depends on reliable credit signals |
+| [SentinelAgent: Graph-based Anomaly Detection in Multi-Agent Systems](https://arxiv.org/abs/2505.24201) | arXiv 2025 | LLM-as-judge anomaly detection over agent interaction graphs; pluggable; completes the G-Safeguard/BlindGuard detection trilogy |
+| [Don't Trust Stubborn Neighbors: A Security Framework for Agentic Networks](https://arxiv.org/abs/2603.15809) | arXiv 2026 | Formalizes MAS security via the Friedkin-Johnsen social model; high stubbornness improves security but harms consensus |
+| [Attention Knows Whom to Trust: Attention-based Trust Management for LLM MAS (A-Trust)](https://arxiv.org/abs/2506.02546) | arXiv 2025 | Formalizes inter-agent trust via Grice's cooperative principle; six-dimensional, attention-based, training-free |
+| [Detecting Multi-Agent Collusion Through Multi-Agent Interpretability (NARCBench)](https://arxiv.org/abs/2604.01151) | arXiv 2026 | First to detect collusion from internal activations; new NARCBench; 1.00 AUROC in-distribution, 0.60-0.86 zero-shot |
+| [AgentSafe: Safeguarding LLM-based Multi-Agent Systems via Hierarchical Data Management](https://arxiv.org/abs/2503.04392) | arXiv 2025 | Hierarchical data/permission management across 4 topologies; introduces Cooperative Safety Index; yet another bespoke metric |
 ---
 
 ## 📏 3. Benchmarks & Evaluation
@@ -269,10 +294,11 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 | [AgentHarm](https://arxiv.org/abs/2410.09024) | ICLR 2025 | Direct misuse by malicious users | Does not cover adversarial injection |
 | [ASB (Agent Security Bench)](https://arxiv.org/abs/2410.02644) | ICLR 2025 | 10 attack types across 10 agents | Synthetic environments only |
 | [AgentDoG](https://github.com/AI45Lab/AgentDoG) | arXiv 2025 | Trajectory-level safety evaluation with 3D taxonomy | New; limited third-party validation |
-| [WASP](https://arxiv.org/abs/2504.18575) | arXiv 2025 | Web agent prompt injection | Web-only scope |
 | [CVE-Bench](https://arxiv.org/abs/2503.17332) | ICML 2025 Spotlight | Agent offensive capability | Web app vulnerabilities only; measures attack capability |
 | [WASP](https://arxiv.org/abs/2504.18575) | NeurIPS 2025 D&B (Meta FAIR) | Realistic end-to-end web-agent prompt injection benchmark | Attacker constrained to plausible site-user capabilities; only web tasks |
 | [ST-WebAgentBench](https://arxiv.org/abs/2410.06703) | ICLR 2026 (IBM Research) | 375 enterprise web tasks × 3,057 policies across 6 ST dimensions; introduces Completion under Policy (CuP) — SOTA agents' CuP is <2/3 their nominal completion rate | Enterprise scenarios only; policy-authoring assumed |
+| [TAMAS](https://arxiv.org/abs/2511.05269) | ACL 2026 | Adversarial risks (impersonation, direct/indirect injection) across multi-agent configurations | Config-dependent; ERS composite metric hard to compare across systems |
+| [PEAR](https://arxiv.org/abs/2510.07505) | Findings of EACL 2026 | Robustness of planner-executor multi-agent pipelines | Weak planners hurt more than weak executors; composite metric; narrow architecture |
 
 ---only
 
