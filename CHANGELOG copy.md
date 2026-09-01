@@ -3,6 +3,65 @@
 All additions and rejections are logged here. Most recent entries appear first.
 
 ---
+## 2026-09-01
+
+### Added (28 papers, multi-agent security batch update)
+
+Sourced from a curated multi-agent-security annotation table; every paper screened against the inclusion criteria in MAINTENANCE.md (agentic scope, substantive contribution, experimental support, venue/citation/gap-filling).
+
+#### §0 Surveys & Position Papers
+- [Open Challenges in Multi-Agent Security](https://arxiv.org/abs/2505.02077) -> §0 | defines MASEC as a field; 9 threat classes, 7 attack axes, 3-layer governance
+- [Comprehensive Vulnerability Analysis is Necessary for Trustworthy LLM-MAS](https://arxiv.org/abs/2506.01245) -> §0 | formal argument that compositional (single-agent) security fails in MAS
+- [Architecture Matters for Multi-Agent Security](https://arxiv.org/abs/2604.23459) -> §0 | ICML 2026; attack success varies up to 3.8x across topologies, no universally optimal architecture
+- [Seven Security Challenges in Cross-domain Multi-Agent LLM Systems](https://arxiv.org/abs/2505.23847) -> §0 | npj AI (Nature family); seven cross-domain challenges incl. collusion, conflict-of-interest
+
+#### §1.6 Multi-Agent Propagation
+- [MultiAgent Collaboration Attack](https://arxiv.org/abs/2406.14711) -> §1.6 | Findings of EMNLP 2024; adversarial agent degrades debate accuracy
+- [Flooding Spread of Manipulated Knowledge](https://arxiv.org/abs/2407.07791) -> §1.6 | knowledge manipulation propagates through agent communities
+- [CORBA](https://arxiv.org/abs/2502.14529) -> §1.6 | contagious recursive blocking with theoretical propagation guarantees; AutoGen + Camel
+- [Agents Under Siege](https://arxiv.org/abs/2504.00218) -> §1.6 | ACL 2025; max-flow/min-cost attack-path optimization, topology-agnostic ASR
+- [Amplified Vulnerabilities (MAD jailbreak)](https://arxiv.org/abs/2504.16489) -> §1.6 | debate systems inherently more fragile than single agents
+- [Secret Collusion among AI Agents](https://arxiv.org/abs/2402.07510) -> §1.6 | NeurIPS 2024; foundational steganographic collusion formalization
+- [Red-Teaming via Communication Attacks (AiTM)](https://arxiv.org/abs/2502.14847) -> §1.6 | Findings of ACL 2025; Agent-in-the-Middle on the message channel
+- [Don't Trust Your Upstream (Topology-Guided Propagation)](https://arxiv.org/abs/2512.04129) -> §1.6 | 5 topologies x 3 frameworks; 40-78% ASR swing
+- [Topology Matters: Memory Leakage](https://arxiv.org/abs/2512.04668) -> §1.6 | Findings of ACL 2026; fully-connected graphs maximize memory leakage
+
+#### §2.4 Multi-Agent Trust Protocols
+- [Breaking and Fixing Defenses Against Control-Flow Hijacking](https://arxiv.org/abs/2510.17276) -> §2.4 | ICLR 2026; breaks existing MAS control-flow defenses then fixes them
+- [On the Resilience of MAS with Faulty Agents](https://arxiv.org/abs/2408.00989) -> §2.4 | hierarchical structures most resilient (5.5% vs 10.5%)
+- [Multi-Agent Security Tax](https://arxiv.org/abs/2502.19145) -> §2.4 | AAAI 2025; direct security-utility tradeoff evidence
+- [SAC: Robust MA-LLMs under Byzantine Faults](https://arxiv.org/abs/2605.09076) -> §2.4 | Byzantine-fault-tolerance complement to prompt-injection framing
+- [CP-WBFT](https://arxiv.org/abs/2511.10400) -> §2.4 | AAAI 2025; systematic 6-topology x 7-node BFT evaluation
+- [AgentXposed (Who's the Mole?)](https://arxiv.org/abs/2507.04724) -> §2.4 | detection across 3 structures x 4 covert attacks
+- [INFA-Guard](https://arxiv.org/abs/2601.14667) -> §2.4 | treats infected benign agents as a distinct threat class; ~33% ASR reduction
+- [SentinelNet](https://arxiv.org/abs/2510.16219) -> §2.4 | WWW 2026; credit-based dynamic threat detection
+- [SentinelAgent](https://arxiv.org/abs/2505.24201) -> §2.4 | LLM-as-judge graph anomaly detection (G-Safeguard/BlindGuard trilogy)
+- [Don't Trust Stubborn Neighbors](https://arxiv.org/abs/2603.15809) -> §2.4 | Friedkin-Johnsen social model for agentic-network security
+- [A-Trust](https://arxiv.org/abs/2506.02546) -> §2.4 | attention-based trust via Grice's cooperative principle
+- [NARCBench (collusion detection)](https://arxiv.org/abs/2604.01151) -> §2.4 | first activation-level multi-agent collusion detection
+- [AgentSafe](https://arxiv.org/abs/2503.04392) -> §2.4 | hierarchical data management; Cooperative Safety Index
+
+#### §3 Benchmarks & Evaluation
+- [TAMAS](https://arxiv.org/abs/2511.05269) -> §3 | ACL 2026; adversarial risks across multi-agent configurations
+- [PEAR](https://arxiv.org/abs/2510.07505) -> §3 | Findings of EACL 2026; planner-executor robustness
+
+### Fixed (sources / duplicates)
+- **G-Safeguard**: verified ACL 2025 main (long, 2025.acl-long.359) — already correct, no change
+- **Morris II**: verified CCS 2025 (ACM, 10.1145/3719027.3765196) — already correct, no change
+- **BlindGuard**: venue ACL 2026 -> arXiv 2025 (no proceedings record; arXiv 2508.08127)
+- **Prompt Infection**: venue arXiv 2025 -> ESORICS 2025 Workshop (Springer 10.1007/978-3-032-16092-8_28)
+- **AutoDefense**: venue arXiv 2024 -> NeurIPS 2024 Workshop
+- **WASP**: venue arXiv 2025 -> NeurIPS 2025 D&B (§1.2); removed duplicate WASP row in §3
+- **Evil Geniuses**: removed duplicate row in §0 (kept §1.6 entry)
+
+### Considered but Rejected
+- [MAST — Why Do Multi-Agent Systems Fail?](https://arxiv.org/abs/2503.13657) | reliability/failure taxonomy, not security scope
+- [TraceAegis](https://arxiv.org/abs/2510.11203) | single-agent execution-trace anomaly detection, not inter-agent MAS security
+- [Understanding Information Propagation Effects of Communication Topologies](https://arxiv.org/abs/2505.23352) | topology-utility study, not a security contribution
+- MAEBE (arXiv:2506.03053) | emergent moral-drift / alignment framing, not attack/defense/benchmark
+
+---
+
 ## 2026-06-29
 
 ### Added (6 papers, batch update)
