@@ -204,7 +204,7 @@ In multi-agent systems, a compromised agent can spread malicious instructions to
 | [Amplified Vulnerabilities: Structured Jailbreak Attacks on LLM-based Multi-Agent Debate](https://arxiv.org/abs/2504.16489) | arXiv 2025 | Shows debate systems are inherently more fragile than single agents; four fine-grained metrics but not cross-paper comparable |
 | [Secret Collusion among AI Agents: Multi-Agent Deception via Steganography](https://arxiv.org/abs/2402.07510) | NeurIPS 2024 | Foundational formalization of covert steganographic collusion between agents; theory-heavy, detection left largely open |
 | [Red-Teaming LLM Multi-Agent Systems via Communication Attacks (AiTM)](https://arxiv.org/abs/2502.14847) | Findings of ACL 2025 | Agent-in-the-Middle manipulates only the message channel, not agents; exposes MAS communication as the attack surface |
-| [Don't Trust Your Upstream: Topology-Guided Adversarial Propagation in LLM-MAS](https://arxiv.org/abs/2512.04129) | arXiv 2025 | Topology-guided propagation across 5 topologies x 3 MAS frameworks; 40-78% ASR swing shows topology governs security |
+| [Tipping the Dominos: Topology-Aware Multi-Hop Attacks on LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2512.04129) | arXiv 2025 | Topology-aware multi-hop propagation across 5 topologies x 3 MAS frameworks; 40-78% ASR swing shows topology governs security |
 | [Topology Matters: Measuring Memory Leakage in Multi-Agent LLMs](https://arxiv.org/abs/2512.04668) | Findings of ACL 2026 | Measures private-memory leakage across 6 topologies; fully-connected graphs maximize leakage; empirical, no defense proposed |
 
 ---

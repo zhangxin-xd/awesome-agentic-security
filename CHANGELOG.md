@@ -23,7 +23,7 @@ Sourced from a curated multi-agent-security annotation table; every paper screen
 - [Amplified Vulnerabilities (MAD jailbreak)](https://arxiv.org/abs/2504.16489) -> §1.6 | debate systems inherently more fragile than single agents
 - [Secret Collusion among AI Agents](https://arxiv.org/abs/2402.07510) -> §1.6 | NeurIPS 2024; foundational steganographic collusion formalization
 - [Red-Teaming via Communication Attacks (AiTM)](https://arxiv.org/abs/2502.14847) -> §1.6 | Findings of ACL 2025; Agent-in-the-Middle on the message channel
-- [Don't Trust Your Upstream (Topology-Guided Propagation)](https://arxiv.org/abs/2512.04129) -> §1.6 | 5 topologies x 3 frameworks; 40-78% ASR swing
+- [Tipping the Dominos: Topology-Aware Multi-Hop Attacks on LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2512.04129) -> §1.6 | 5 topologies x 3 frameworks; 40-78% ASR swing
 - [Topology Matters: Memory Leakage](https://arxiv.org/abs/2512.04668) -> §1.6 | Findings of ACL 2026; fully-connected graphs maximize memory leakage
 
 #### §2.4 Multi-Agent Trust Protocols
