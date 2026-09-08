@@ -293,6 +293,7 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 | [R-Judge](https://arxiv.org/abs/2401.10019) | EMNLP Findings 2024 | Agent safety risk awareness across 27 risk scenarios | Static scenarios; no multi-agent |
 | [AgentHarm](https://arxiv.org/abs/2410.09024) | ICLR 2025 | Direct misuse by malicious users | Does not cover adversarial injection |
 | [ASB (Agent Security Bench)](https://arxiv.org/abs/2410.02644) | ICLR 2025 | 10 attack types across 10 agents | Synthetic environments only |
+| [Darkmoon](https://github.com/ASCIT31/Dark-Moon) | Open source (GPL-3.0) autonomous AI pentest agent that plans and executes offensive actions across web, API, Active Directory and Kubernetes with proof of exploitation |
 | [AgentDoG](https://github.com/AI45Lab/AgentDoG) | arXiv 2025 | Trajectory-level safety evaluation with 3D taxonomy | New; limited third-party validation |
 | [CVE-Bench](https://arxiv.org/abs/2503.17332) | ICML 2025 Spotlight | Agent offensive capability | Web app vulnerabilities only; measures attack capability |
 | [WASP](https://arxiv.org/abs/2504.18575) | NeurIPS 2025 D&B (Meta FAIR) | Realistic end-to-end web-agent prompt injection benchmark | Attacker constrained to plausible site-user capabilities; only web tasks |
