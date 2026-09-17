@@ -308,6 +308,7 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 
 | Tool | Description |
 |------|-------------|
+| [AffixIO](https://github.com/AffixIO/SDK) | Agentic Pay Kit with host-side signed yes/no ACTION attestation (x402BeforePay / KYA; not person KYC). [npm](https://www.npmjs.com/package/affixio) · [docs](https://www.affix-io.com/agent-trust/) |
 | [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) | Programmable safety rails for LLM apps |
 | [Invariant Labs Scanner](https://invariantlabs.ai) | MCP security scanning and monitoring |
 | [AgentDoG](https://github.com/AI45Lab/AgentDoG) | Diagnostic guardrail framework with taxonomy-guided evaluation |
