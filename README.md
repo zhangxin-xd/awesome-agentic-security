@@ -309,6 +309,7 @@ Enforcing that instructions from higher-privilege sources (system > developer > 
 | Tool | Description |
 |------|-------------|
 | [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) | Programmable safety rails for LLM apps |
+| [HOL Guard](https://github.com/hashgraph-online/hol-guard) | Apache-2.0 local action-policy checks and human approvals for supported coding-agent shell, file, package, and MCP operations; integration-dependent, not a sandbox. |
 | [Invariant Labs Scanner](https://invariantlabs.ai) | MCP security scanning and monitoring |
 | [AgentDoG](https://github.com/AI45Lab/AgentDoG) | Diagnostic guardrail framework with taxonomy-guided evaluation |
 | [Garak](https://github.com/NVIDIA/garak) | LLM vulnerability scanner; some agent-specific probes |
